@@ -1,0 +1,11 @@
+@import "../../../../styles/variables";
+
+.logo {
+    color: $white;
+    display: inline-block;
+    margin-left: 24px;
+    
+    &:hover {
+        color: $red;
+    }
+}

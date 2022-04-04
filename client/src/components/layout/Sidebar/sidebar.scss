@@ -1,0 +1,59 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+
+nav {
+    background-color: $black;
+    border-right: solid 1px $mid-gray;
+    box-sizing: border-box;
+    height: 100vh;
+    left: -220px;
+    position: fixed;
+    top: 56px;
+    transition: 0.5s;
+    width: 220px;
+    z-index: 2;
+
+    &.active {
+        left: 0;
+    }
+
+
+    .sidebar-nav-list {
+        // line-height: 48px;
+    }
+    .sidebar-nav-item {
+        box-sizing: border-box;
+        // align-items: center;
+        // display: flex;
+        font-size: 20px;
+        margin-bottom: 16px;;
+        // padding-left: 24px;
+    }
+    .sidebar-nav-link{
+        align-items: center;
+        color: $white;
+        display: flex;
+        padding-left: 30px;
+        text-decoration: none;
+        &:hover {
+            color: $red;
+        }
+        &.active {
+            border-left: 6px solid $red;
+            color: $red;
+            padding-left: 24px;
+        }
+    }
+    .sidebar-nav-icon {
+        // display: block;
+        height: 24px;
+        margin-right: 12px;
+        width: 24px;
+    }
+    .sidebar-nav-label {
+        // display: block;
+    }
+    @include responsive(sm) {
+        left: 0;
+    }
+}

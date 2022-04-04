@@ -1,0 +1,42 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+
+#search-bar {
+    background-color: $black;
+    box-sizing: border-box;
+    border-bottom: solid 1px $mid-gray;
+    display: none;
+    height: 100%;
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    
+    &.active {
+        display: flex;
+    }
+
+    input {
+        font-size: 16px;
+        margin-left: 14px;
+        
+        &:focus {
+            outline: 0;
+        }
+
+        &::-webkit-search-cancel-button { 
+            background-image: -webkit-gradient(linear, left top, right bottom, from(transparent), color-stop(0.46, transparent), color-stop(0.46, #fff), color-stop(0.54, #fff), color-stop(0.54, transparent), to(transparent)), -webkit-gradient(linear, right top, left bottom, from(transparent), color-stop(0.46, transparent), color-stop(0.46, #fff), color-stop(0.54, #fff), color-stop(0.54, transparent), to(transparent));
+            height: 15px;
+            width: 15px;
+            -webkit-appearance: none;
+        }
+    }
+ 
+    @include responsive(sm) {
+        border-bottom: none;
+        display: flex;
+        margin-left: 24px;
+        position: relative;
+        top: 0;
+        width: 300px;
+    }
+}

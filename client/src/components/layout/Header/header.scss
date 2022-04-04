@@ -1,0 +1,41 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+
+header {
+    align-items: center;
+    background-color: $black;
+    border-bottom: solid 1px $mid-gray;
+    box-sizing: border-box;
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+    button {
+        background-color: transparent;
+        color: $light-gray;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+    div:first-child {
+        align-items: center;
+        display: flex;
+        height: 100%;
+        left: 0px;
+        top: 0;
+    }
+    div:nth-child(2) {
+        align-items: center;
+        display: flex;
+        
+    }
+    @include responsive(sm) {
+        // display: flex;
+        &div:first-child {
+            position: absolute;
+        }
+    }
+}

@@ -1,0 +1,35 @@
+@import "../../../../styles/mixins";
+@import "../../../../styles/variables";
+
+#sidebar-button {
+    display: inline-block;
+    margin-left: 30px;
+    padding: 0;
+    z-index: 6;
+
+    .bar {
+        background-color: $white;
+        border-radius: 2px;
+        display: block;
+        height: 1px;
+        margin: 7px 0;
+        transition: 0.5s;
+        width: 20px;
+
+        &.top.active {
+            transform: translateY(8px) rotateY(180deg) rotateZ(-45deg);
+        }
+
+        &.middle.active {
+            transform: scaleX(0);
+        }
+
+        &.bottom.active {
+            transform: translateY(-8px) rotateY(180deg) rotateZ(45deg);
+        }
+    }
+
+    @include responsive(sm) {
+        display: none;
+    }
+}

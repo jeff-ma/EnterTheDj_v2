@@ -1,0 +1,37 @@
+#root {
+    margin-top: 56px;
+}
+html {
+    min-width: 320px;
+}
+body {
+    background-color: $black;
+    color: $white;
+    margin: 0;
+    // min-width: 300px;
+    font-family: titillium;
+}
+
+main {
+    // padding-left: 220px;
+    position: relative;
+    @include responsive(sm) {
+        padding-left: 220px;
+    }
+}
+ul {
+    list-style-type: none;
+    // margin-left: 0;
+    padding-left: 0;
+}
+input {
+    background-color: transparent;
+    // border-bottom: 1px solid $light-gray;
+    // border-left: 0;
+    // border-right: 0;
+    // border-top: 0;
+    border: 0;
+    color: $white;
+    display: block;
+    width: 100%;
+}
